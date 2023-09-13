@@ -4,6 +4,7 @@ import React from 'react'
 
 const Header = () => {
   const { userId } = auth()
+
   return (
     <>
       <nav className="bg-red-900 py-4 px-8">
@@ -16,7 +17,7 @@ const Header = () => {
 
           <div className="flex items-center font-bold">
             {!userId ? (
-              //로그인 안된 경우
+              // 로그인이 안된 경우
               <>
                 <Link
                   href="/sign-in"
@@ -24,7 +25,6 @@ const Header = () => {
                 >
                   Sign In
                 </Link>
-
                 <Link
                   href="/sign-up"
                   className="text-gray-300 hover:text-white mr-4"
@@ -40,8 +40,15 @@ const Header = () => {
                 >
                   Dashboard
                 </Link>
-                <div className="ml auto"></div>
-                <UserButton afterSignOutUrl="/" />
+                <Link
+                  href="/profile"
+                  className="text-gray-300 hover:text-white mr-4"
+                >
+                  Profile
+                </Link>
+                <div className="ml-auto">
+                  <UserButton afterSignOutUrl="/" />
+                </div>
               </>
             )}
           </div>
