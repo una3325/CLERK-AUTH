@@ -16,6 +16,12 @@ const Header = () => {
           </div>
 
           <div className="flex items-center font-bold">
+            <Link href="/repos" className="text-gray-300 hover:text-white mr-4">
+              Repos
+            </Link>
+          </div>
+
+          <div className="flex items-center font-bold">
             {!userId ? (
               // 로그인이 안된 경우
               <>
