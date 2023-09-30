@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import React from 'react'
 
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <h1>Home 화면 입니당...</h1>
     </>
   )
 }
